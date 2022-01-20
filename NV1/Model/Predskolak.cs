@@ -8,5 +8,6 @@ namespace NV1.Model
 {
     class Predskolak : Osoba
     {
+
     }
 }

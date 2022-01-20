@@ -15,11 +15,11 @@ namespace NV1.Model
         public static Osoba GetInstance(int vek, Pohlavi pohlavi, string jmeno)
         {
 
-            if (vek<0)
-                throw new ArgumentException("Vek nemuze byt mensi nez 0.");
+            if (vek < 0)
+                return null;
 
             if (vek < 7)
-                return new Predskolak;
+                return new Predskolak(vek, pohlavi, jmeno);
 
         }
     }

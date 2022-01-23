@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NV1.Model
 {
-    enum Pohlavi
+    enum Genders
     {
         Unknown,
         Male,

@@ -19,7 +19,7 @@ namespace NV1.Model
                 return null;
 
             if (age <= 7)
-                return new Preschooler(age, gender, name);
+                return Preschooler.GetInstance(age, gender, name);
 
             if (age <= 19)
                 return new Student(age, gender, name);

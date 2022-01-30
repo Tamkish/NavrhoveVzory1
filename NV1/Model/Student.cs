@@ -8,11 +8,32 @@ namespace NV1.Model
 {
     class Student : Person
     {
-        public Student(int age, Genders gender, string name)
+        const int maxcount = 5;
+        static List<Student> students;
+
+
+        private Student(int age, Genders gender, string name)
         {
             Age = age;
             Gender = gender;
             Name = name;
+        }
+
+        public new Student GetInstance(int age, Genders gender, string name)
+        {
+            if (students == null)
+                students = new List<Student>();
+
+            if (students.Count > maxcount)
+            {
+                return null; //if cannot create new one
+            }
+            else
+            {
+                Student student = new Student(age, gender, name);
+                students.Add(student);
+                return student;
+            }
         }
 
         public override string ToString()
